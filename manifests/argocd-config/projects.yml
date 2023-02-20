@@ -6,10 +6,10 @@ metadata:
   namespace: argocd
 spec:
   clusterResourceWhitelist:
-    - group: 'argoproj.io/v1alpha1'
-      kind: 'Application'
-    #- group: '*'
-    #  kind: '*'
+    #- group: 'argoproj.io/v1alpha1'
+    #  kind: 'Application'
+    - group: '*'
+      kind: '*'
   destinations:
     - namespace: '*'
       server: '*'
