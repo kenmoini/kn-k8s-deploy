@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
   - argocd-config.yml
   - cert-manager-operator.yml
+  - external-secrets-operator.yml
