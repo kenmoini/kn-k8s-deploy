@@ -5,3 +5,5 @@ resources:
   - 00_namespace.yml
   - 02_operatorgroup.yml
   - 05_subscription.yml
+  - 10_clusterissuer-letsencrypt.yml
+  - 10_clusterissuer-letsencrypt-stage.yml

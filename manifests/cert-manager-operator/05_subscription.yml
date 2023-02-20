@@ -4,6 +4,8 @@ kind: Subscription
 metadata:
   name: cert-manager
   namespace: cert-manager
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
 spec:
   channel: stable
   name: cert-manager

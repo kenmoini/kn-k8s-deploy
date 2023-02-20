@@ -4,4 +4,6 @@ metadata:
   creationTimestamp: null
   name: cert-manager
   namespace: cert-manager
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
 spec: {}
