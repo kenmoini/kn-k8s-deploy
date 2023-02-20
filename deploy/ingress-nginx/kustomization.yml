@@ -1,0 +1,8 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: ingress-nginx
+
+bases:
+  - https://github.com/kubernetes/ingress-nginx/deploy/static/provider/cloud
+  - https://github.com/kenmoini/custom-nginx-ingress-errors/deploy

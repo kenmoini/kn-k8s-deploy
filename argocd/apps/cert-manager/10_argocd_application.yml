@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cert-manager
+  namespace: argocd
+spec:
+  project: helm-installed
+  source:
+    chart: cert-manager
+    repoURL: https://charts.jetstack.io
+    targetRevision: v1.11.0 
+    helm:
+      releaseName: cert-manager
+      valueFiles:
+      - values.yml
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: cert-manager
+  syncPolicy:
+    automated:
+      prune: true
+      allowEmpty: true
+      # selfHeal: false # overrides changes made on the cluster that drift from git state
+    syncOptions:
+      - CreateNamespace=true
