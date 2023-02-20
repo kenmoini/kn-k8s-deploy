@@ -5,4 +5,4 @@ resources:
   - argocd-config.yml
   - cert-manager-operator.yml
   #- external-secrets-operator.yml
-  - sealed-secrets-chart.yml
+  #- sealed-secrets-chart.yml
